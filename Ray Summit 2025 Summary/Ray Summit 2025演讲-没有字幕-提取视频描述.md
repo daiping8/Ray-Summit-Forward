@@ -123,3 +123,38 @@ Nikita与Mengjin还正式发布了开源工具Ray Export API，该接口支持�
 
 [https://www.youtube.com/watch?v=cQkZDs6V2zI  ](https://www.youtube.com/watch?v=cQkZDs6V2zI%20%20)  
 原视频描述有误
+---
+## Taming Distributed AI Training with Ray + Datadog Observability | Ray Summit 2025
+[https://www.youtube.com/watch?v=Yl0K1dUztcU](https://www.youtube.com/watch?v=Yl0K1dUztcU)
+在 “Taming Distributed AI Training with Ray + Datadog Observability | Ray Summit 2025” 视频中，Datadog 高级软件工程师 Savita 分享构建 Ray 可观测性历程。分布式 AI 训练常出现作业无响应、莫名失败等问题，Datadog 团队借助 Ray 训练也因基础设施故障遇作业失败无解释情况。为此，他们分阶段构建可观测性，虽有进展但存信息整合等问题。视频还介绍 Ray 与 Datadog 可观测性对分布式 AI 训练的优化，阐述其将成变革者的原因，分享构建中传递上下文等挑战及解决办法，最后给出构建可观测性建议，鼓励体验预览产品并反馈。
+---
+## How Grab Personalizes & Optimizes RL Policies Using Ray | Ray Summit 2025
+[https://www.youtube.com/watch?v=w4tDwvjy_ZE](https://www.youtube.com/watch?v=w4tDwvjy_ZE)
+在2025年Ray峰会上，来自Grab的罗曼·科捷利尼科夫（Roman Kotelnikov）与阿比纳夫·赖（Abhinav Rai）分享了这款东南亚领先的超级应用，如何借助由Ray端到端驱动的大规模强化学习（RL）平台，实现现实世界决策流程的变革。
+
+他们首先阐述了Grab运营环境的独特复杂性：覆盖多个国家的数百万用户，每个市场都具备独特的用户行为、监管规则、基础设施限制，同时还面临高峰交通、需求激增、突发暴雨等瞬息万变的实时状况。要提供高度本地化、具备适应性的数字体验，所需模型需满足以下特性：
+- 高度本地化，贴合精细化实时场景
+- 能即时适应不断变化的环境
+- 具备多样性，并在多类场景中持续接受评估
+
+这使得Grab对可扩展的RL基础设施产生了巨大需求，而Ray正是满足这一需求的理想选择。
+
+### Ray在Grab强化学习生命周期中的端到端作用
+罗曼与阿比纳夫详细介绍了Ray如何为Grab强化学习工作流的每个阶段提供支持，从大规模分布式训练到实时生产部署均涵盖在内。
+
+#### 1. 借助Ray RLlib与Ray Tune加速强化学习训练
+Grab利用Ray的分布式运行时、RLlib框架及PyTorch Lightning，高效开展复杂的强化学习实验，具体体现在三方面：
+- **大规模可扩展性**：多节点、多GPU的分布式训练，支持在大规模数据集与模拟环境中快速迭代。
+- **丰富算法套件**：RLlib提供一系列可直接用于生产的算法，同时支持灵活集成符合Grab各市场特性的自定义模型、环境与指标。
+- **自动化优化**：Ray Tune可协调超参数调优、检查点存储与实验跟踪，仅需极少人工操作就能持续提升模型性能。
+
+#### 2. 借助Ray Serve实现实时部署与适应性评估
+在生产环境中提供高度场景化的服务对Grab至关重要，而Ray Serve通过以下能力满足这一需求：
+- **并发模型服务**：多版本模型并行运行，这对在线评估、A/B测试及分阶段上线至关重要。
+- **场景化流量路由**：Ray Serve可动态将请求路由至当前最适配的模型，例如在高峰时段调用专用定价模型，或在恶劣天气时切换至经优化的供需模型。
+- **业务级扩展性**：为大规模、场景感知型部署提供支撑，确保满足覆盖Grab所有用户的严格延迟与可靠性要求。
+
+罗曼与阿比纳夫在结尾处提到，Ray让Grab团队得以将精力聚焦于核心创新，而非应对基础设施负担，助力他们打造出可复现、模块化、可扩展的强化学习系统，这些系统能实时适应东南亚复杂且动态的市场环境。
+
+参会者将了解到，Ray如何为大规模强化学习系统整合训练、部署与在线评估环节，为行业内部分要求最严苛的现实应用提供技术支撑。
+---
